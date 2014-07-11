@@ -1,4 +1,8 @@
-angular-try
+Angular.js the path of investigation
 ===========
 
-This is the place where answers for the questions on angular.js will be stored.
+**Influences of this way**
+
+1. A beter way to learn Angular.js : Thinkster.io
+http://www.thinkster.io/angularjs/GtaQ0oMGIl/a-better-way-to-learn-angularjs
+
