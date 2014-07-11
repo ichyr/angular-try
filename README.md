@@ -3,7 +3,10 @@ Angular.js the path of investigation
 
 ** Contents **
 
-1. Usage of $compile service
+1. PhoneCat tutorial application
+*https://docs.angularjs.org/tutorial*
+
+2. Usage of $compile service
 *http://www.youtube.com/watch?v=vJqJ-0U74IY*
 
 
