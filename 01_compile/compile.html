@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en" ng-app="APP">
+<head>
+  <meta char set="UTF-8">
+  <title>$compile angular service</title>
+</head>
+<body>
+  <div ng-controller="theController">
+    <btn val="10"></btn>
+    <input type="text" ng-model="val" />
+    <button ng-click="addVal(val)">Add</button>
+    <div id="holder">
+
+    </div>
+  </div>
+
+  <script type="text/javascript" src="http://code.angularjs.org/1.2.2/angular.min.js"></script>
+  <script type="text/javascript">
+    angular.module("APP", []).
+    controller("theController", ['$scope', '$compile', function($scope, $compile) {
+      $scope.addVal = function(v) {
+        var btn = $compile('<btn val="' + v + '"></btn>')($scope);
+        // for dynamic binding to input
+        // var btn = $compile('<btn val="{{ v }}"></btn>')($scope);
+        angular.element(document.getElementById('holder')).append(btn);
+      };
+      }]).
+    directive('btn', function() {
+      return {
+        restrict: 'E',
+        scope: {'val' : '@'},
+        template: '<button>{{val}}</button>',
+        link: function(scope, element, attributes) {
+          element.on('click', function() { alert(attributes.val); })
+        }
+
+      }
+      })
+  </script>
+
+</body>
+</html>
